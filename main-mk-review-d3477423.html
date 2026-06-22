@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mk体育 · 叙述式产品介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f6f3ed;
+            font-family: 'Georgia', 'Times New Roman', '宋体', 'Songti SC', serif;
+            color: #2e2b26;
+            line-height: 1.8;
+            padding: 2rem 1.5rem 4rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-wrap {
+            max-width: 820px;
+            width: 100%;
+            background: #fcfaf6;
+            padding: 2.8rem 2.2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #3d3832;
+            border-left: 4px solid #b3a291;
+            padding-left: 1.2rem;
+            margin-bottom: 1.6rem;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #4f4941;
+            margin: 2.2rem 0 0.8rem;
+            border-bottom: 1px dashed #ddd6cb;
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        a {
+            color: #785d48;
+            text-decoration: none;
+            border-bottom: 1px solid #d6c9bb;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #3f2f24;
+            border-bottom-color: #785d48;
+        }
+
+        .hero-note {
+            background: #f2ede6;
+            padding: 1.4rem 1.8rem;
+            border-radius: 10px;
+            margin: 1.8rem 0 2rem;
+            font-size: 1.05rem;
+            border-left: 6px solid #b3a291;
+            color: #3f3a34;
+        }
+
+        .hero-note p:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.6rem;
+            margin: 1.4rem 0 1.8rem;
+        }
+
+        .feature-item {
+            flex: 1 1 200px;
+            background: #f9f6f0;
+            padding: 1.2rem 1.2rem 1rem;
+            border-radius: 10px;
+            border: 1px solid #e8dfd3;
+        }
+
+        .feature-item strong {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #4f4238;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.5px;
+        }
+
+        .feature-item span {
+            font-size: 0.95rem;
+            color: #5c554c;
+        }
+
+        .quote-box {
+            background: #f3ede5;
+            padding: 1.2rem 1.6rem;
+            border-radius: 8px;
+            margin: 1.6rem 0;
+            font-style: normal;
+            border-left: 4px solid #c7b8a6;
+            color: #4a433c;
+        }
+
+        .quote-box p {
+            margin-bottom: 0.3rem;
+        }
+
+        .tip-box {
+            background: #eae3d9;
+            padding: 1rem 1.4rem;
+            border-radius: 8px;
+            margin: 1.6rem 0;
+            font-size: 0.95rem;
+            border: 1px solid #d6cbbc;
+            color: #3d3832;
+        }
+
+        .faq-mini {
+            margin-top: 2.4rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e2d9cc;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.8rem;
+            padding: 0.4rem 0.2rem;
+            border-bottom: 1px dotted #e0d6c8;
+        }
+
+        .faq-mini summary {
+            cursor: pointer;
+            font-weight: 500;
+            color: #4f4238;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .faq-mini summary::before {
+            content: "▸";
+            color: #8f7c69;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+
+        .faq-mini details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .faq-mini details p {
+            margin: 0.5rem 0 0.2rem 1.4rem;
+            color: #4d453e;
+            font-size: 0.95rem;
+        }
+
+        .footer-note {
+            margin-top: 2.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e2d9cc;
+            font-size: 0.9rem;
+            color: #7b7268;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem 3rem;
+            }
+            .page-wrap {
+                padding: 1.8rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 0.8rem;
+            }
+            .hero-note {
+                padding: 1rem 1.2rem;
+            }
+            .feature-grid {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <h1>mk体育 · 从赛场到屏幕</h1>
+
+    <!-- 摘要 / 叙述式开场 -->
+    <p>
+        体育的魅力往往藏在细碎的节奏里——一次精准的传球、一记压哨的投篮、一场逆转的赛末点。
+        <a href="https://main-mk.com">mk体育</a> 所做的，不过是把这些瞬间更妥帖地呈现给关注赛事的人。
+        没有繁复的包装，只有对运动本身的注视。无论是足球、篮球、网球还是电子竞技，
+        这个平台试图让信息流动得干净一些，让每一场比赛的脉络都清晰可读。
+    </p>
+
+    <!-- 引用块 / 点睛句 -->
+    <div class="quote-box">
+        <p>“我们并不制造激情，只是替激情省去绕路的时间。”</p>
+        <p style="text-align:right; font-size:0.9rem; color:#6f655b;">—— mk体育 团队手记</p>
+    </div>
+
+    <!-- 亮点 / 特点 -->
+    <h2>几个值得留意的细节</h2>
+    <div class="feature-grid">
+        <div class="feature-item">
+            <strong>赛程脉络</strong>
+            <span>联赛、杯赛、资格赛——按时间线与重要度排序，一目了然。不必在多个页面间跳转。</span>
+        </div>
+        <div class="feature-item">
+            <strong>数据与叙述</strong>
+            <span>基础统计（控球率、射门、犯规等）搭配简短赛况描述，不会冷冰冰，也不过度渲染。</span>
+        </div>
+        <div class="feature-item">
+            <strong>多项目覆盖</strong>
+            <span>从主流职业联赛到新兴电竞赛事，频道划分清晰，可按兴趣筛选，不强制关注。</span>
+        </div>
+    </div>
+
+    <!-- 使用建议 / 场景提示 -->
+    <h2>怎样使用更顺心</h2>
+    <div class="hero-note">
+        <p>
+            如果你是比赛日习惯打开多个标签页的球迷，不妨把 mk体育 设为其中一个固定页面——
+            它更像一本随时翻看的赛事手册，而非不断推送弹窗的播报器。
+            赛前浏览对阵与伤停信息，赛后回顾简短战报。遇到感兴趣的深度内容，可以自行延展阅读。
+            页面不设自动播放视频、不抢占视觉焦点，适合在办公间隙或通勤时安静地扫一眼。
+        </p>
+        <p>
+            另外，平台偶尔会有用户整理的观赛笔记（非官方），内容质量参差，建议带着自己的判断去看。
+            整体而言，这里的信息密度适中，不会让人感到压迫。
+        </p>
+    </div>
+
+    <!-- 可信但克制的说明 -->
+    <div class="tip-box">
+        <p><strong>一点说明</strong> · mk体育 的内容主要来自公开赛事数据与编辑组整理，部分赛果可能存在延迟或人工疏漏。
+        重大赛事信息请以官方渠道为准。平台不提供博彩、投注或任何形式的金融建议，
+        也不保证所有数据的绝对实时性。使用前请根据自身需求评估。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-mini">
+        <h2 style="margin-top:0; border-bottom: none; font-size:1.2rem;">常见疑问 · 简答</h2>
+
+        <details>
+            <summary>需要注册才能浏览吗？</summary>
+            <p>不需要。绝大多数内容对访客开放，无需登录。部分互动功能（如收藏赛程、发表短评）可能需注册，但非强制。</p>
+        </details>
+
+        <details>
+            <summary>移动端体验如何？</summary>
+            <p>页面采用自适应布局，手机浏览器上阅读基本流畅。没有独立 App，但浏览器添加到主屏幕后使用体验接近轻应用。</p>
+        </details>
+
+        <details>
+            <summary>信息更新频率大概是？</summary>
+            <p>主流联赛进行期间，赛果与简讯通常在比赛结束后数分钟内更新。深度文章与专题每周不定时发布。</p>
+        </details>
+
+        <details>
+            <summary>mk体育 与竞彩类网站有关系吗？</summary>
+            <p>没有。平台不涉及任何博彩、赔率或投注引导，以赛事信息与内容分享为主。</p>
+        </details>
+    </div>
+
+    <!-- 再次嵌入链接（自然融合） -->
+    <p style="margin-top:1.6rem;">
+        如果你对某个联赛的长期走势感兴趣，可以定期看看
+        <a href="https://main-mk.com">mk体育</a> 上的赛程回溯与总结。
+        它未必是最快的信息源，但能提供一个安静翻阅的角落。
+    </p>
+
+    <div class="footer-note">
+        <p>体育是一面镜子，照见专注与偶然。mk体育 只是擦亮其中一小片。</p>
+    </div>
+
+</div>
+</body>
+</html>
